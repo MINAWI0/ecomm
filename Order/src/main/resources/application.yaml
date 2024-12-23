@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Order-service
+  datasource:
+    url: jdbc:postgresql://pg-1c352440-minaouimh-855e.f.aivencloud.com:19060/defaultdb # Replace with your database name
+    username: avnadmin # Replace with your PostgreSQL username
+    password:  # Replace with your PostgreSQL password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # Use 'validate', 'update', 'create', or 'create-drop' as needed
+    show-sql: true # Show SQL queries in the logs
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+server:
+  port: 8084 # Replace with your preferred port
+
+
