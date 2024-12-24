@@ -1,10 +1,15 @@
 spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   application:
     name: Order-service
   datasource:
-    url: jdbc:postgresql://pg-1c352440-minaouimh-855e.f.aivencloud.com:19060/defaultdb # Replace with your database name
-    username: avnadmin # Replace with your PostgreSQL username
-    password:  # Replace with your PostgreSQL password
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: root # Replace with your PostgreSQL username
+    password:  root # Replace with your PostgreSQL password
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

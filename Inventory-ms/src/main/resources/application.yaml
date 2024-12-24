@@ -2,8 +2,8 @@ spring:
   application:
     name: inventory-service
   datasource:
-    url:
-    password:
+    url: jdbc:postgresql://pg-1c352440-minaouimh-855e.f.aivencloud.com:19060/defaultdb
+    password: avnadmin
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: avnadmin
   jpa:
